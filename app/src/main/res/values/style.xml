@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.FabStyle" parent="Widget.MaterialComponents.FloatingActionButton">
+        <!-- Customize the FAB background color -->
+        <item name="backgroundTint">#63D9F3</item>
+
+        <!-- Customize the FAB icon color -->
+        <item name="tint">@color/white</item>
+
+        <!-- Customize other FAB attributes as needed -->
+    </style>
+</resources>

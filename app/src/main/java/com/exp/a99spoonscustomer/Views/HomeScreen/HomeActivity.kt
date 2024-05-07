@@ -33,8 +33,8 @@ class HomeActivity : AppCompatActivity() {
             binding.main.openDrawer(GravityCompat.START)
         }
         setContentView(binding.root)
-        setCurrentFragment(homeFragment)
-        setScreenIndicator(1)
+        setCurrentFragment(locationFragment)
+        setScreenIndicator(2)
         setNavDrawer()
         binding.logoutButton.setOnClickListener {
             signOut()
@@ -72,11 +72,10 @@ class HomeActivity : AppCompatActivity() {
             setCurrentFragment(locationFragment)
             setScreenIndicator(2)
         }
-        binding.tab3.setOnClickListener {
+        binding.notification.setOnClickListener {
             setCurrentFragment(notificationFragment)
-            setScreenIndicator(3)
+            setScreenIndicator(0)
         }
-
     }
 
     private fun setScreenIndicator(currentScreen: Int) {
@@ -90,10 +89,7 @@ class HomeActivity : AppCompatActivity() {
                     ContextCompat.getColor(this, R.color.unselected_icon),
                     PorterDuff.Mode.SRC_IN
                 )
-                binding.icon.setColorFilter(
-                    ContextCompat.getColor(this, R.color.unselected_icon),
-                    PorterDuff.Mode.SRC_IN
-                )
+
 
             }
 
@@ -106,19 +102,10 @@ class HomeActivity : AppCompatActivity() {
                     ContextCompat.getColor(this, R.color.unselected_icon),
                     PorterDuff.Mode.SRC_IN
                 )
-                binding.icon.setColorFilter(
-                    ContextCompat.getColor(this, R.color.unselected_icon),
-                    PorterDuff.Mode.SRC_IN
-                )
-
 
             }
 
-            3 -> {
-                binding.icon.setColorFilter(
-                    ContextCompat.getColor(this, R.color.selected_icon),
-                    PorterDuff.Mode.SRC_IN
-                )
+            0 -> {
                 binding.tab2.setColorFilter(
                     ContextCompat.getColor(this, R.color.unselected_icon),
                     PorterDuff.Mode.SRC_IN
@@ -127,8 +114,6 @@ class HomeActivity : AppCompatActivity() {
                     ContextCompat.getColor(this, R.color.unselected_icon),
                     PorterDuff.Mode.SRC_IN
                 )
-
-
             }
 
         }

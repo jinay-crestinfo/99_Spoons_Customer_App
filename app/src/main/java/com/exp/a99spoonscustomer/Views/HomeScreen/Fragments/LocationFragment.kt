@@ -31,8 +31,8 @@ class LocationFragment : Fragment() {
             )
             val markerOptions = MarkerOptions()
                 .position(markerPosition)
-                .title("Marker Title")
-                .snippet("Marker Snippet")
+                .title("Vending Machine")
+                .snippet("Opp. Mart, United State")
             it.addMarker(markerOptions)
             it.moveCamera(CameraUpdateFactory.newLatLngZoom(markerPosition, 15f))
         }

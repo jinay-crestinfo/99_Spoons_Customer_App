@@ -48,6 +48,37 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_margin="5dp"
                     android:src="@drawable/ic_logo" />
+
+                <RelativeLayout
+                    android:id="@+id/notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tab2"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <ImageView
+                        android:id="@+id/icon"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/ic_notification"
+                        app:tint="@color/unselected_icon" />
+
+                    <View
+                        android:id="@+id/red_dot"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignTop="@id/icon"
+                        android:layout_alignEnd="@id/icon"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/red_dot_background" />
+                </RelativeLayout>
             </FrameLayout>
 
 
@@ -109,37 +140,10 @@
                 android:layout_height="36dp"
                 android:layout_marginBottom="10dp"
                 android:src="@drawable/ic_location"
-                app:layout_constraintEnd_toStartOf="@+id/tab3"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/tab1"
                 app:layout_constraintTop_toTopOf="parent"
                 app:tint="@color/unselected_icon" />
-
-            <RelativeLayout
-                android:id="@+id/tab3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/tab2"
-                app:layout_constraintTop_toTopOf="parent">
-
-
-                <ImageView
-                    android:id="@+id/icon"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:layout_marginBottom="10dp"
-                    android:src="@drawable/ic_notification"
-                    app:tint="@color/unselected_icon" />
-
-                <View
-                    android:id="@+id/red_dot"
-                    android:layout_width="12dp"
-                    android:layout_height="12dp"
-                    android:layout_alignTop="@id/icon"
-                    android:layout_alignEnd="@id/icon"
-                    android:layout_marginEnd="4dp"
-                    android:background="@drawable/red_dot_background" />
-            </RelativeLayout>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -156,7 +160,7 @@
         app:headerLayout="@layout/drawer_header"
         app:menu="@menu/nav_drawer_menu">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">

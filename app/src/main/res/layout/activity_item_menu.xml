@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.PromotionScreen.PromotionScreen">
+    android:orientation="vertical"
+    tools:context=".Views.ItemMenu.ItemMenu">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_promoscreen"
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
         android:background="@color/white"
-        android:theme="@style/ToolBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:titleTextColor="@color/white">
+        android:theme="@style/ToolBarTheme">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -29,29 +25,36 @@
                 android:layout_gravity="center_vertical"
                 android:layout_margin="5dp"
                 android:src="@drawable/ic_pop_up_back"
-                app:tint="@color/black" />
+                android:tint="@color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
-                android:text="Payment Coupons for You"
+                android:text="99 Spoons Menu"
                 android:textSize="20sp"
                 android:textStyle="bold" />
         </FrameLayout>
     </androidx.appcompat.widget.Toolbar>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_adapter"
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:text="Soft Serve"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <GridView
+        android:id="@+id/idGVcourses"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginHorizontal="10dp"
-       android:layout_marginVertical="10dp"
-        android:foregroundGravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/empty_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_promoscreen" />
+        android:layout_margin="5dp"
+        android:horizontalSpacing="6dp"
+        android:numColumns="2"
+        android:verticalSpacing="6dp" />
 </LinearLayout>
